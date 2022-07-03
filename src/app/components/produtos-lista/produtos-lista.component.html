@@ -1,0 +1,64 @@
+<div class="content-products">
+  <div class="header-products">
+    <div class="header-text">
+      <h1>Produtos</h1>
+      <h2>Edite e adicione produtos</h2>
+    </div>
+    <div class="header-action">
+      <button mat-stroked-button (click)="addProduct()">
+        <mat-icon>add</mat-icon>Adicionar Produto
+      </button>
+    </div>
+  </div>
+  <div class="list-products">
+    <div
+      *ngFor="let produto of productList; let i = index"
+      [ngClass]="i % 2 == 0 ? 'content-grey' : 'content-white'"
+    >
+      <div class="imgProduct">
+        <img
+          src="{{
+            produto.productImages
+              ? produto.productImages[0].caminho
+              : defaultImage
+          }}"
+        />
+      </div>
+      <div class="nameProduct">{{ produto.nome }}</div>
+      <div class="tagCodProduct">Código do produto</div>
+      <div class="CodProduct">{{ produto.codigo }}</div>
+      <div class="tagPriceProduct">Preço</div>
+      <div class="PriceProduct">{{ produto.preco | currency: "BRL" }}</div>
+      <div class="tagPricePromoProduct">Preço Promocional</div>
+      <div class="PricePromoProduct">
+        {{ produto.precoPromocional | currency: "BRL" }}
+      </div>
+      <div class="actionProduct">
+        <div [ngClass]="i % 2 == 0 ? 'btns-grey' : 'btns-white'">
+          <button mat-mini-fab (click)="editItem(produto.id)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button
+            mat-mini-fab
+            (click)="modal.toggle()"
+            (click)="setItemDelete(produto.id)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-modal #modal>
+  <h1>Excluir produto</h1>
+  <p>Tem certeza que quer excluir este produto?</p>
+
+  <div class="actions">
+    <button (click)="modal.toggle()" class="btn-cancelar">CANCELAR</button>
+    <button (click)="modal.toggle()" (click)="deleteItem()" class="btn-deletar">
+      DELETAR
+    </button>
+  </div>
+</app-modal>

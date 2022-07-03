@@ -1,0 +1,26 @@
+<div class="content">
+  <div class="toolbar" role="banner">
+    <div style="width: 55px; height: 55px">
+      <button
+        mat-icon-button
+        color="accent"
+        aria-label="Voltar aos produtos"
+        (click)="productList()"
+        *ngIf="showProduct"
+      >
+        <mat-icon style="color: white">arrow_back</mat-icon>
+      </button>
+    </div>
+    <div class="divImg"><img src="/assets/system/logo.png" /></div>
+  </div>
+  <div class="produtos">
+    <div *ngIf="!showProduct; else showAllProducts">
+      <app-produtos-lista
+        (showProductPage)="addItem($event)"
+      ></app-produtos-lista>
+    </div>
+    <ng-template #showAllProducts>
+      <app-produto [productId]="productId"></app-produto>
+    </ng-template>
+  </div>
+</div>

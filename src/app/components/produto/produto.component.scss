@@ -1,0 +1,313 @@
+@media only screen and (min-width: 600px) {
+  .content-product {
+    display: grid;
+    grid-template-rows: 225px 1fr 56px;
+    background-color: white;
+    height: 100%;
+
+    .header-product {
+      grid-template-rows: 42px 30px 1fr;
+      display: grid !important;
+
+      .title-header {
+        margin-top: 16px;
+        font-size: 17px;
+        margin-left: 16px;
+        font-weight: 500;
+        font-family: Roboto;
+        letter-spacing: 0.32px;
+        color: #000000;
+        opacity: 1;
+      }
+      .subtitle-header {
+        font-size: 12px;
+        margin-left: 16px;
+        margin-bottom: 0px;
+        font-weight: 550;
+        font-family: Roboto;
+        letter-spacing: 0.24px;
+        color: #000000;
+        opacity: 1;
+      }
+      .img-header {
+        display: flex;
+        overflow: overlay;
+
+        .images-content .first-image {
+          height: 36px;
+          background-color: black;
+          color: white;
+          border-radius: 0 0 4px 4px;
+        }
+        .images-content .first-image p {
+          margin: 0;
+          padding: 8px 68px;
+        }
+
+        .images-content img {
+          height: 105px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .images-content mat-icon {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 5px;
+          left: 220px;
+        }
+        .images-content,
+        .upload-content,
+        .upload-content-lock {
+          width: 246px;
+          height: 140px;
+          min-width: 246px;
+          margin-left: 16px;
+          border-radius: 4px;
+          opacity: 1;
+          position: relative;
+        }
+        .upload-content {
+          border: 1px dashed #00000036;
+          border-radius: 4px;
+          opacity: 1;
+          margin-right: 16px;
+        }
+        .upload-content-lock {
+          pointer-events: none;
+          opacity: 0.5;
+          background: #ccc;
+        }
+      }
+    }
+
+    .form-product {
+      overflow: auto;
+      .form-input {
+        display: grid !important;
+        grid-template-rows: 56px 56px 56px 56px 56px;
+        row-gap: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+        //font-family: TT Norms Pro;
+        letter-spacing: 0.32px;
+        color: #00000066;
+        opacity: 1;
+      }
+    }
+
+    .form-action {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 160px 160px;
+      gap: 16px;
+      .save-btn {
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        opacity: 1;
+      }
+      .cancel-btn {
+        border: 1px solid #000000;
+        border-radius: 4px;
+        opacity: 1;
+      }
+    }
+    .form-action button {
+      height: 36px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .content-product {
+    display: grid;
+    grid-template-rows: 225px 1fr 56px;
+    background-color: white;
+    height: 100%;
+
+    .header-product {
+      grid-template-rows: 42px 30px 1fr;
+      display: grid !important;
+
+      .title-header {
+        margin-top: 16px;
+        font-size: 17px;
+        margin-left: 16px;
+        font-weight: 500;
+        font-family: Roboto;
+        letter-spacing: 0.32px;
+        color: #000000;
+        opacity: 1;
+      }
+      .subtitle-header {
+        font-size: 12px;
+        margin-left: 16px;
+        margin-bottom: 0px;
+        font-weight: 550;
+        font-family: Roboto;
+        letter-spacing: 0.24px;
+        color: #000000;
+        opacity: 1;
+      }
+      .img-header {
+        display: flex;
+        overflow: overlay;
+
+        .images-content .first-image {
+          height: 36px;
+          background-color: black;
+          color: white;
+          border-radius: 0 0 4px 4px;
+        }
+        .images-content .first-image p {
+          margin: 0;
+          padding: 8px 68px;
+        }
+
+        .images-content img {
+          height: 105px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .images-content mat-icon {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 5px;
+          left: 220px;
+        }
+        .images-content,
+        .upload-content,
+        .upload-content-lock {
+          width: 246px;
+          height: 140px;
+          min-width: 246px;
+          margin-left: 16px;
+          border-radius: 4px;
+          opacity: 1;
+          position: relative;
+        }
+        .upload-content {
+          border: 1px dashed #00000036;
+          border-radius: 4px;
+          opacity: 1;
+          margin-right: 16px;
+        }
+        .upload-content-lock {
+          pointer-events: none;
+          opacity: 0.5;
+          background: #ccc;
+        }
+      }
+    }
+
+    .form-product {
+      overflow: auto;
+      .form-input {
+        display: grid !important;
+        grid-template-rows: 56px 56px 56px 56px 56px;
+        row-gap: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+        //font-family: TT Norms Pro;
+        letter-spacing: 0.32px;
+        color: #00000066;
+        opacity: 1;
+      }
+    }
+
+    .form-action {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      width: 100%;
+      box-shadow: 0px -3px 6px #00000029;
+
+      .save-btn {
+        width: 160px;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        opacity: 1;
+        margin: auto;
+        margin-left: 4px;
+      }
+      .cancel-btn {
+        width: 160px;
+        border: 1px solid #000000;
+        border-radius: 4px;
+        opacity: 1;
+        margin: auto;
+        margin-right: 4px;
+      }
+    }
+    .form-action button {
+      height: 36px;
+    }
+  }
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.example-list {
+  width: 1000px;
+  max-width: 100%;
+  border: solid 1px #ccc;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.example-box {
+  padding: 20px 10px;
+  border-right: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

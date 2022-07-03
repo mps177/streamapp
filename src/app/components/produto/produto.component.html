@@ -1,0 +1,79 @@
+<div class="content-product" *ngIf="showForm">
+  <div class="header-product">
+    <div class="title-header">Imagem do produto</div>
+    <div class="subtitle-header">Clique e arraste para ordenar as imagens</div>
+    <div class="img-header">
+      <div class="images-content" *ngFor="let image of images; let i = index">
+        <img src="{{ image.caminho }}" /><mat-icon>open_with</mat-icon>
+        <div class="first-image" *ngIf="i == 0"><p>Imagem principal</p></div>
+      </div>
+      <div
+        [ngClass]="letUpload ? 'upload-content' : 'upload-content-lock'"
+        title="Salve um registro para carregar uma imagem"
+      >
+        <app-upload (newfileData)="newFileData($event)"></app-upload>
+      </div>
+    </div>
+  </div>
+  <div class="form-product">
+    <form [formGroup]="formProduto">
+      <div class="form-input">
+        <mat-form-field appearance="outline">
+          <mat-label>Nome do Produto</mat-label>
+          <input matInput placeholder="" formControlName="nome" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Código do Produto</mat-label>
+          <input
+            matInput
+            placeholder=""
+            formControlName="codigo"
+            id="intTextBox"
+            type="number"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Categoria</mat-label>
+          <mat-select formControlName="categoriaDesc">
+            <mat-option value="Categoria 1">Categoria 1</mat-option>
+            <mat-option value="Categoria 2">Categoria 2</mat-option>
+            <mat-option value="Categoria 3">Categoria 3</mat-option>
+            <mat-option value="Categoria 4">Categoria 4</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Preço</mat-label>
+          <input
+            matInput
+            placeholder=""
+            formControlName="preco"
+            id="currencyTextBox"
+            type="number"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Preço Promocional</mat-label>
+          <input
+            matInput
+            placeholder=""
+            formControlName="precoPromocional"
+            type="number"
+          />
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <div class="form-action">
+    <button mat-stroked-button class="cancel-btn" (click)="cancelBtn()">
+      CANCELAR
+    </button>
+    <button
+      mat-stroked-button
+      class="save-btn"
+      (click)="saveBtn()"
+      [disabled]="formProduto.invalid"
+    >
+      SALVAR
+    </button>
+  </div>
+</div>

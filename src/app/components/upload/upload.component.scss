@@ -1,0 +1,31 @@
+.upload-div {
+  height: 100%;
+  width: 100%;
+  position: relative !important;
+
+  .file-btn {
+    background-color: aliceblue;
+  }
+}
+
+.upload-div mat-icon {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 40px;
+  left: 105px;
+  font-size: 40px;
+}
+
+.upload-div p {
+  width: 65%;
+  height: 50%;
+  position: absolute;
+  top: 75px;
+  left: 62px;
+  font-size: 14px;
+  font-family: normal normal normal 14px/24px TT Norms Pro;
+  letter-spacing: 0.28px;
+  color: #000000;
+  opacity: 1;
+}
